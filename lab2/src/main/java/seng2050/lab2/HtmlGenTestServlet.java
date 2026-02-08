@@ -15,11 +15,11 @@ public class HtmlGenTestServlet extends HttpServlet {
         resp.setContentType("text/html; charset=UTF-8");
         PrintWriter out = resp.getWriter();
         
-        // Test your htmlgen here
-        out.println("<!DOCTYPE html>");
-        out.println("<html><head><title>HtmlGen Test</title></head>");
+        // Use HtmlGen to generate title
+        out.println(HtmlGen.doctype());
+        out.println(HtmlGen.head("My Custom Title"));
         out.println("<body>");
-        out.println("<h1>HtmlGen Test Servlet</h1>");
+        out.println(HtmlGen.h1("HtmlGen Test Servlet"));
         out.println("<p>Add your htmlgen test code here</p>");
         out.println("</body></html>");
     }
