@@ -52,6 +52,10 @@ public class Main {
     tomcat.addServlet("", "GreetingServlet", new GreetingServlet());
     ctx.addServletMappingDecoded("/GreetingServlet", "GreetingServlet");
 
+    // Add and map the HtmlGenTestServlet servlet
+    tomcat.addServlet("", "HtmlGenTest", new HtmlGenTestServlet());
+    ctx.addServletMappingDecoded("/HtmlGenTest", "HtmlGenTest");
+
     // Start Tomcat
     try {
       tomcat.getConnector();
