@@ -47,6 +47,11 @@ public class Main {
     tomcat.addServlet("", "GenerateValidHTML", new GenerateValidHTML());
     ctx.addServletMappingDecoded("/generateValidHTML", "GenerateValidHTML");
 
+
+    // Add and map the GreetingServlet servlet
+    tomcat.addServlet("", "GreetingServlet", new GreetingServlet());
+    ctx.addServletMappingDecoded("/GreetingServlet", "GreetingServlet");
+
     // Start Tomcat
     try {
       tomcat.getConnector();
