@@ -17,10 +17,16 @@ public class HtmlGenTestServlet extends HttpServlet {
         
         // Use HtmlGen to generate title
         out.println(HtmlGen.doctype());
-        out.println(HtmlGen.head("My Custom Title"));
+        out.println("<head>");
+        out.println(HtmlGen.head("A New Title"));
+        out.println(HtmlGen.css("styles/style.css"));
+        out.println(HtmlGen.script("js/script.js"));
+        out.println("</head>");
         out.println("<body>");
-        out.println(HtmlGen.h1("HtmlGen Test Servlet"));
-        out.println("<p>Add your htmlgen test code here</p>");
+        out.println(HtmlGen.h1("HtmlGen Test Servlet Header 1"));
+        out.println(HtmlGen.h2("HtmlGen Test Servlet Header 2"));
+        out.println(HtmlGen.h3("HtmlGen Test Servlet Header 3"));
+        out.println("<p>This is new test code for htmlGen</p>");
         out.println("</body></html>");
     }
 }

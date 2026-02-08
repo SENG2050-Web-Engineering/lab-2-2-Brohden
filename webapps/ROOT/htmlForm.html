@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome to Tomcat Application</h1>
+    <p>This is a simple web application running on Java 21.</p>
+    <ul>
+        <li><a href="/HelloWorld">HelloWorld Servlet</a></li>
+    </ul>
+
+    <form action=GreetingServlet method="GET" onsubmit="return true;">
+    <label for="firstName"> First Name </label>
+    <input type="text" name="firstName" id="firstName"/> <br>
+    <label for="lastName"> Last Name </label>
+    <input type="text" name="lastName" id="lastName"/> <br>
+    <input type="reset" value="Clear"/>
+    <input type="submit" value="Submit" />
+    </form>
+
+</body>
+</html>
